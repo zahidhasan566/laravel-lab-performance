@@ -18,16 +18,19 @@
 		<tr>
 			<td>Product Name </td>
 			<td><input type="text" name="pname" value=""></td>
+            <td> {{$errors->first('pname')}}</td>
 		</tr>
 		<tr>
 		<tr>
 			<td>Quantity</td>
 			<td><input type="text" name="quantity" value=""></td>
+            <td> {{$errors->first('quantity')}}</td>
 			<tr>
 
 		<tr>
 			<td>Price</td>
 			<td><input type="text" name="price" value=""></td>
+            <td> {{$errors->first('price')}}</td>
 		</tr>
 
 		<tr>
@@ -37,8 +40,6 @@
 	</table>
 </form>
 
-@foreach($errors->all() as $err)
-	{{$err}} <br>
-@endforeach
+
 </body>
 </html>

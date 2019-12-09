@@ -17,23 +17,28 @@
 	<tr>
 			<td>Name</td>
 			<td><input type="text" name="name" value=""></td>
+        <td> {{$errors->first('name')}}</td>
 		</tr>
 		<tr>
 			<td>Contact No</td>
 			<td><input type="text" name="contact" value=""></td>
+            <td> {{$errors->first('contact')}}</td>
 		</tr>
 		<tr>
 		<tr>
 			<td>Phone</td>
 			<td><input type="text" name="phone" value=""></td>
+            <td> {{$errors->first('phone')}}</td>
 			<tr>
 		<tr>
 			<td>Username</td>
 			<td><input type="text" name="username" value=""></td>
+            <td> {{$errors->first('username')}}</td>
 		</tr>
 		<tr>
 			<td>PASSWORD</td>
 			<td><input type="password" name="password" value=""></td>
+            <td> {{$errors->first('password')}}</td>
 		</tr>
 
 		<tr>
@@ -43,8 +48,5 @@
 	</table>
 </form>
 
-@foreach($errors->all() as $err)
-	{{$err}} <br>
-@endforeach
 </body>
 </html>

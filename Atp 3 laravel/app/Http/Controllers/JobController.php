@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\job;
 use Illuminate\Http\Request;
+use Validator;
 
 class JobController extends Controller
 {
@@ -40,6 +41,11 @@ class JobController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'pname'=>'required',
+            'quantity'=>'required',
+            'price'=>'required'
+        ]);
         $user =new job();
 
         $user->name = $request->pname;

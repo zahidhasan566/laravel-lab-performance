@@ -46,6 +46,9 @@ Route::get('/logout', 'LogoutController@index')->name('logout.index');
     Route::get('/job/delete/{id}', 'JobController@destroy')->name('job.delete');
     Route::post('/job/delete/{id}', 'JobController@destroy');
 
+Route::get('/live_search', 'LiveSearch@index')->name('livesearch.index');;
+Route::get('/live_search/action', 'LiveSearch@action')->name('live_search.action');
+
 
 
 
