@@ -92,6 +92,14 @@ class JobController extends Controller
      */
     public function update(Request $request,  $id)
     {
+        $request->validate([
+            'pname'=>'required',
+            'quantity'=>'required',
+            'price'=>'required'
+        ]);
+
+
+
         $id = job::find($id);
         $id->name = $request->pname;
         $id->quantity = $request->quantity;

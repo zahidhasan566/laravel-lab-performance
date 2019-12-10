@@ -121,6 +121,16 @@ class StudentController extends Controller
 
     function update(Request $request, $id){
 
+        $request->validate([
+            'name'=>'required',
+            'contact'=>'required',
+            'phone'=>'required',
+            'username'=>'required',
+            'password'=>'required'
+
+
+        ]);
+
         $user = User::find($id);
         $user->name = $request->name;
         $user->contact = $request->contact;
